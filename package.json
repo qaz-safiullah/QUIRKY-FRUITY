@@ -1,8 +1,9 @@
 {
   "name": "quirky-fruity",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node backend/server.js",
-    "build": "cd backend && npm install"
+    "postinstall": "cd backend && npm install"
   }
 }
