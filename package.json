@@ -1,0 +1,8 @@
+{
+  "name": "quirky-fruity",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "cd backend && npm install"
+  }
+}
