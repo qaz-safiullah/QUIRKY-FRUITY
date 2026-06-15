@@ -1,0 +1,10 @@
+:root {
+  --color-cream: #EBDABB;
+  --color-grid: #DBCAB0;
+  --color-slate: #637F81;
+  --color-orange: #D25235;
+  --color-black: #111111;
+  --color-white: #FFFFFF;
+  --font-main: 'Poppins', sans-serif;
+  --max-width: 1400px; 
+}

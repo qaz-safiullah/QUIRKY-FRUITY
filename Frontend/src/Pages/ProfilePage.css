@@ -1,0 +1,158 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 72px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fdf0d5;
+  background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 35px 35px;
+  background-position: center top;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-top: 0;
+}
+
+.profile-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  flex: 1;
+  background: #fdf0d5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #d95d39;
+}
+
+.stat-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.profile-form .form-input {
+  width: 100%;
+  background: #f5f0e5;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  outline: none;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-form .form-input:focus {
+  box-shadow: 0 0 0 3px rgba(217,93,57,0.3);
+}
+
+.profile-form .form-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.profile-form .btn-submit {
+  width: 100%;
+  padding: 16px !important;
+  margin-top: 15px;
+}
+
+.profile-form .btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-msg {
+  font-family: 'Poppins', sans-serif;
+  color: #2d6a4f;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 5px 0 0;
+}
+
+.profile-err {
+  font-family: 'Poppins', sans-serif;
+  color: #d95d39;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 5px 0 0;
+}
+
+.profile-logout {
+  background: none;
+  border: 2px solid #d95d39;
+  color: #d95d39;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.profile-logout:hover {
+  background: #d95d39;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-page { padding: 65px 15px 40px; }
+  .profile-card { padding: 25px 20px; margin-top: 0; }
+  .profile-title { font-size: 1.5rem; }
+  .stat-number { font-size: 1.5rem; }
+}

@@ -1,0 +1,127 @@
+.orders-page {
+  min-height: 100vh;
+  padding: 72px 20px 60px;
+  display: flex;
+  justify-content: center;
+  background: #fdf0d5;
+  background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 35px 35px;
+  background-position: center top;
+}
+
+.orders-container {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.orders-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+.orders-empty {
+  font-family: 'Poppins', sans-serif;
+  color: #888;
+  font-weight: 700;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-id {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+}
+
+.order-status {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: 30px;
+}
+
+.status-pending { background: #fff3cd; color: #856404; }
+.status-confirmed { background: #cce5ff; color: #004085; }
+.status-shipped { background: #d1ecf1; color: #0c5460; }
+.status-delivered { background: #d4edda; color: #155724; }
+
+.order-date {
+  margin-left: auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.order-item-price { color: #1a1a1a; }
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 2px solid #fdf0d5;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.order-total-amount {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #d95d39;
+}
+
+@media screen and (max-width: 768px) {
+  .orders-page { padding: 65px 15px 40px; }
+  .orders-title { font-size: 1.5rem; }
+  .order-card { padding: 15px 18px; }
+}

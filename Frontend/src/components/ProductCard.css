@@ -1,0 +1,147 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 280px;
+}
+
+/* Image Layering */
+.card-image-stack {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-burst {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-fruit {
+  position: absolute;
+  width: 65%; /* Scales the fruit nicely inside the burst */
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.card-image-stack:hover .card-fruit {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Typography matching Figma */
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.card-price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  color: #E8D3B4; /* Exact Cream/Tan color from the design */
+  margin-bottom: 25px;
+}
+
+/* Default Black Pill Button */
+.btn-add-cart {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 12px 35px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: #d95d39; /* Hover to orange */
+  transform: translateY(-2px);
+}
+
+/* Active State Pill (+/- Controls) */
+.cart-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  border-radius: 40px;
+  padding: 8px 15px;
+  width: 140px;
+  box-sizing: border-box;
+}
+
+.btn-qty {
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.btn-qty:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.qty-text {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Product Card)
+========================================= */
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    max-width: 280px; /* Keeps its shape, but allows shrinking if needed */
+  }
+
+  .card-image-stack {
+    width: 220px;
+    height: 220px;
+  }
+
+  .card-title {
+    font-size: 28px; /* Slightly smaller for mobile */
+  }
+
+  .card-price {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  /* Make the pill buttons a little chunkier for thumbs */
+  .btn-add-cart {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .cart-controls {
+    width: 100%; /* Expands to match the button size */
+    padding: 10px 15px;
+  }
+}

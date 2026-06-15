@@ -1,0 +1,54 @@
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* This prevents the section from being hidden under your fixed/sticky Navbar */
+section {
+  scroll-margin-top: 100px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-cream); /* Fallback background for the whole site */
+  color: var(--color-black);
+  overflow-x: hidden; 
+}
+
+/* The grid has been removed from here! It is now controlled in your component CSS. */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
